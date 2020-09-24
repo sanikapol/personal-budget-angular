@@ -14,8 +14,8 @@ div.menu {
     padding: 0 40px;
 }
 
-div.menu ul,
-div.menu ul li {
+nav div.menu ul,
+nav div.menu ul li {
     margin: 0;
     padding: 0 ;
     list-style: none;
@@ -37,7 +37,7 @@ div.menu ul li a:hover  {
     color: #4d5791;
 }
 
-div.hero {
+header div.hero {
     height: 350px;
     background-color: #b4c6f0;
     background-image: url('/bg.png');
