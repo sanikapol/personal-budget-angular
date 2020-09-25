@@ -22,7 +22,7 @@ div.menu ul li {
     display: inline-block;
 }
 
-div.menu nav ul li a {
+div.menu ul li a {
     display: block;
     padding: 0 20px;
     line-height: 44px;
