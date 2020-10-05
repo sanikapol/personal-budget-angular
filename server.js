@@ -1,14 +1,13 @@
+//Budget API
+
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const port = 3000;
 const fs = require('fs')
 
-app.use('/',express.static('public'));
 
-
-app.get('/hello', (req,res) => {
-    res.send("Hello World");
-});
+app.use(cors());
 
 app.get('/budget', (req,res) => { 
     try{
@@ -20,10 +19,10 @@ app.get('/budget', (req,res) => {
     }catch (err){
         console.log(err)
         res.send("Something went wrong")
-    }
+    } 
     
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening at http//:localhost${port}`)
+    console.log(`API serverd at http//:localhost${port}`)
 });
