@@ -15,7 +15,7 @@ export class HomepageComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.http.get('http://localhost:3000/budget')
     .subscribe((res: any) => {
-      if(this.dataService.dataSource.datasets.length == 0){
+      if(this.dataService.dataSource.datasets[0].data.length == 0){
         for (var i = 0; i < res.myBudget.length; i++){
           this.dataService.dataSource.datasets[0].data[i] = res.myBudget[i].budget;
           this.dataService.dataSource.labels[i] = res.myBudget[i].title;
